@@ -175,7 +175,7 @@
   .sec-desc { color: var(--sub); max-width: 640px; }
 
   /* ---------- Works ---------- */
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--sp-5); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: var(--sp-5); }
   .card {
     background: var(--panel); border: 1px solid var(--line);
     border-radius: var(--radius); padding: var(--sp-6);
@@ -259,6 +259,10 @@
     .svc { flex-direction: column; gap: var(--sp-2); }
     .contact-box { padding: var(--sp-8) var(--sp-6); }
     .log-label { padding-left: var(--sp-4); }
+    /* 触控目标 ≥44px */
+    .theme-switch button { min-height: 44px; min-width: 44px; padding: 7px 12px; }
+    .logo { display: inline-flex; align-items: center; min-height: 44px; }
+    .card h3 a { display: inline-block; padding: 10px 0; }
   }
 </style>
 </head>
